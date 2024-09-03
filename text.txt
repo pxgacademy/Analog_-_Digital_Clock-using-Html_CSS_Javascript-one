@@ -1,0 +1,81 @@
+1. What is the output of the following code snippet?
+const myObject = {
+ a: 1,
+ b: 2,
+ c: 3
+};
+for (let prop in myObject) {
+ console.log(myObject[prop]);
+}
+A. myObject.a, myObject.b, myObject.c
+B. myObject.1, myObject.2, myObject.3
+C. 1, 2, 3
+D. a, b, c
+
+2. Which of the following statements is true about String concatenation?
+A. Concatenation always happens from left to right.
+B. Adding numbers to strings converts them to strings automatically.
+C. Both A & B
+
+3. What happens when you try to access a non-existent property in an object?
+A. It returns null
+B. It returns undefined
+C. It throws an error
+
+4. What will the indexOf() method return for the following code?
+let str = "Mississippi";
+console.log(str.indexOf("i", 3));
+A. 1
+B. 2
+C. 4
+D. -1
+
+5. What is the output of the following code snippet?
+const x = ""
+if(!x.length){
+console.log("Hey")
+}else{
+console.log("Hi")
+}
+A. Hey
+B. Hi
+C. Nothing will console
+D. Will give error
+
+6. Consider the following code:
+var person = {};
+person.name = "John";
+person.age = 30;
+How many properties does the person object have?
+A. 0
+B. 1
+C. 2
+D. 3
+
+7.Which method converts all characters in a string to uppercase?
+A. toUpperCase()
+B. upperCase()
+C. toUpper()
+D. makeUppercase()
+
+8. How do you access the value of a property in an object?
+A. Using dot notation
+B. Using square bracket notation
+C. Both a and b
+D. None of the above
+
+9. How do you delete a property from an object?
+A. delete(myObject, "propertyName")
+B. delete myObject.propertyName
+C. myObject.deleteProperty("propertyName")
+D. myObject.removeProperty("propertyName")
+
+10. Consider the following code snippet:
+const str = "Hello";
+str[0] = "h";
+console.log(str);
+What will be logged to the console?
+A. hello
+B. Hello
+C. Will give error
+D. undefined

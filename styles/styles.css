@@ -1,0 +1,72 @@
+.container {
+  box-shadow: 20px 30px 40px rgba(0, 0, 0, 0.35),
+    inset 5px 5px 10px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.4);
+  border-top-left-radius: 225px;
+  border-top-right-radius: 225px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.clock {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3),
+    inset 5px 5px 10px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.clock span {
+  position: absolute;
+  inset: 20px;
+  color: #ffffff;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--i)));
+  /* 360 / 12 = 30deg */
+}
+
+.clock span b {
+  font-size: 2em;
+  opacity: 0.25;
+  font-weight: 600;
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--i)));
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px;
+  filter: blur(3px);
+  /* animation: animate 1s linear infinite; */
+}
+
+/* digital clock */
+#time {
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.5),
+    inset 2px 2px 10px 0 rgba(255, 255, 255, 0.2),
+    inset -2px -2px 10px 0 rgba(0, 0, 0, 0.4);
+  border: none;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <!-- CSS raw file -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- Google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/ce74b8a1bb.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Tailwindcss cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <!-- body started here -->
+  <body class="font-manrope h-screen">
+    <main class="h-full w-full flex items-center justify-center bg-[#2f363e]">
+      <div
+        class="container relative w-[450px] flex flex-col items-center justify-center"
+      >
+        <div
+          class="clock relative w-[450px] h-[450px] bg-[#2f363e] rounded-full flex items-center justify-center mb-8 z-50"
+        >
+          <div
+            id="aSeconds"
+            class="circle absolute w-[300px] h-[300px] border-[1px] border-gray-700/50 rounded-full flex justify-center items-start z-30 before:bg-[#04fc43]"
+          >
+            <i
+              class="absolute w-[2px] h-[50%] bg-[#04fc43] transform origin-bottom scale-y-[0.5] rounded-md"
+            ></i>
+          </div>
+          <div
+            id="aMinutes"
+            class="circle absolute w-[240px] h-[240px] border-[1px] border-gray-700/50 rounded-full flex justify-center items-start z-20 before:bg-[#fee800]"
+          >
+            <i
+              class="absolute w-[6px] h-[50%] bg-[#fee800] transform origin-bottom scale-y-[0.5] rounded-3xl"
+            ></i>
+          </div>
+          <div
+            id="aHours"
+            class="circle absolute w-[180px] h-[180px] border-[1px] border-gray-700/50 rounded-full flex justify-center items-start z-10 before:bg-[#ff2972]"
+          >
+            <i
+              class="absolute w-[6px] h-[50%] bg-[#ff2972] transform origin-bottom scale-y-[0.5] rounded-3xl"
+            ></i>
+          </div>
+
+          <span style="--i: 1"><b>1</b></span>
+          <span style="--i: 2"><b>2</b></span>
+          <span style="--i: 3"><b>3</b></span>
+          <span style="--i: 4"><b>4</b></span>
+          <span style="--i: 5"><b>5</b></span>
+          <span style="--i: 6"><b>6</b></span>
+          <span style="--i: 7"><b>7</b></span>
+          <span style="--i: 8"><b>8</b></span>
+          <span style="--i: 9"><b>9</b></span>
+          <span style="--i: 10"><b>10</b></span>
+          <span style="--i: 11"><b>11</b></span>
+          <span style="--i: 12"><b>12</b></span>
+        </div>
+
+        <!-- digital clock -->
+        <div
+          id="time"
+          class="w-80 mb-10 py-3 px-6 text-[2rem] font-extrabold border-[2px] border-gray-800 rounded-xl flex items-center justify-center gap-5 text-gray-500"
+        >
+          <div class="w-1/4 flex items-cente gap-1 text-[#ff2972]">
+            <div id="dHours">00</div>
+            <span>:</span>
+          </div>
+          <div class="w-1/4 flex items-center gap-1 text-[#fee800]">
+            <div id="dMinutes">00</div>
+            <span>:</span>
+          </div>
+          <div id="dSeconds" class="w-1/4 text-[#04fc43]">00</div>
+          <div id="ampm" class="w-1/4">AM</div>
+        </div>
+      </div>
+    </main>
+    <!-- JavaScript -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
